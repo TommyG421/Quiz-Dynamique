@@ -1,0 +1,196 @@
+/* Global styles */
+body {
+    background-color: #1a1a1a; /* Fond sombre pour un effet futuriste */
+    color: white; /* Texte blanc pour contraster avec le fond sombre */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Formulaire de début avec effet de transition */
+#name-form {
+    background: linear-gradient(45deg, #ff66b2, #0066ff); /* Dégradé de rose à bleu */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+#name-form:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: #2b2b2b;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #ff66b2; /* Rose futuriste pour les boutons */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff3385; /* Rose foncé pour le hover */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Style pour la section Quiz */
+#quiz {
+    background: linear-gradient(135deg, #ff66b2, #0066ff); /* Dégradé rose-bleu */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white; /* Texte blanc pour les questions */
+}
+
+#answers button {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #003366; /* Bleu foncé pour les réponses */
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#answers button:hover {
+    background-color: #004b8d; /* Bleu plus clair au survol */
+    transform: scale(1.05); /* Effet de zoom */
+}
+
+/* Timer */
+#timer {
+    font-size: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Next button */
+#next-button {
+    background-color: #ff66b2; /* Rose pour le bouton suivant */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #ff3385; /* Rose foncé au survol */
+    transform: scale(1.1);
+}
+
+/* Style pour le tableau des scores */
+#scoreboard {
+    background-color: #222222; /* Fond sombre pour le tableau */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+#scores-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#scores-table th, #scores-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    font-size: 18px;
+}
+
+#scores-table th {
+    background-color: #003366; /* Bleu sombre pour les entêtes */
+}
+
+#scores-table td {
+    background-color: #111111; /* Gris sombre pour les lignes */
+}
+
+#scores-table tr:nth-child(even) td {
+    background-color: #222222; /* Lignes paires légèrement plus claires */
+}
+
+#scores-table tr:hover td {
+    background-color: #003366; /* Bleu clair au survol des lignes */
+}
+
+/* Général pour les animations */
+button, #next-button, #scoreboard, #quiz {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+button {
+    background-color: #ff66b2; /* Rose futuriste pour les boutons */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Pour prendre toute la largeur */
+}
+
+/* Lorsque le bouton est survolé */
+button:hover {
+    background-color: #ff3385; /* Rose foncé pour le hover */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Ajoute de l'écart entre les deux boutons du tableau des scores */
+#scoreboard button {
+    margin-bottom: 10px; /* Ajoute un écart de 10px entre les boutons */
+}
+
+/* Supprimer l'espacement des boutons uniquement au cas où */
+#scoreboard .button-container {
+    display: block; /* Les boutons seront empilés verticalement */
+}
